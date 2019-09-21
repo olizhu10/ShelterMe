@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1> What kind of meals can you offer? </h1>
+    <form method="POST" id="breakfast-button" action="/questions">
+      <input type="submit" value="Breakfast"/>
+    </form>
+    <form method="POST" id="lunch-button" action="/questions">
+      <input type="submit" value="Lunch"/>
+    </form>
+    <form method="POST" id="dinner-button" action="/questions">
+      <input type="submit" value="Dinner"/>
+    </form>
+{% endblock %}
