@@ -26,14 +26,10 @@ def questions():
             pass
     return question+role
 
-@app.route('/location', methods=['GET','POST'])
-def location():
-    return render_template('base.html', last_updated=dir_last_updated('static'))
-
 
 @app.route('/location', methods=['GET','POST'])
 def location():
-    return render_template('locationcheck.html', last_updated=dir_last_updated('static'))
+    return render_template('searcherdistance.html', last_updated=dir_last_updated('static'))
 
 
 def dir_last_updated(folder):
