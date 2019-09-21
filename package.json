@@ -1,0 +1,23 @@
+{
+  "name": "bigredhacks2k19",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olizhu10/bigredhacks2k19.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olizhu10/bigredhacks2k19/issues"
+  },
+  "homepage": "https://github.com/olizhu10/bigredhacks2k19#readme",
+  "dependencies": {
+    "firebase": "^6.6.2",
+    "firebase-tools": "^7.3.2"
+  }
+}

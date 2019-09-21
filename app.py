@@ -15,6 +15,12 @@ def questions():
     question = request.args.get('question')
     return render_template(question+'.html', last_updated=dir_last_updated('static'))
 
+@app.route('/map', methods=['GET','POST'])
+def map():
+    loc = get_location()
+    return render_template('map.html', last_updated=dir_last_updated('static'),
+    loc=loc)
+
 def dir_last_updated(folder):
     return str(max(os.path.getmtime(os.path.join(root_path, f))
                for root_path, dirs, files in os.walk(folder)
@@ -35,7 +41,7 @@ def next(current):
 """retrieves location from database"""
 @app.route('/location')
 def get_location():
-    return
+    return 'Ithaca, NY'
 
 
 
