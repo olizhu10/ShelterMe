@@ -1,9 +1,7 @@
 from flask import Flask, render_template, request, send_file, redirect, url_for
-<<<<<<< HEAD
-=======
+
 from node import Node
 from path import ROOT
->>>>>>> 9c348ab328feaab2afb50eeba3b2b4c58f83af42
 import sqlite3
 import os
 
@@ -44,11 +42,6 @@ def dir_last_updated(folder):
 def locate():
     return 'Ithaca, NY'
 
-<<<<<<< HEAD
-
-
-
-=======
 """finds the next page in the sequence depending on user input"""
 @app.route('/next')
 def next(current):
@@ -61,7 +54,6 @@ def next(current):
 @app.route('/location')
 def get_location():
     return
->>>>>>> 9c348ab328feaab2afb50eeba3b2b4c58f83af42
 
 
 

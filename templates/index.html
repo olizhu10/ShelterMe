@@ -3,9 +3,16 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css?u={{ last_updated }}">
+    <style>
+      @font-face { font-family: HKGrotesk; src: url('HKGrotesk-Bold.otf'); }
+      h1 {
+         font-family: HKGrotesk;
+      }
+    </style>
   </head>
   <body>
     <div>
+        <h1> Welcome to Shelter Me! </h1>
       <form method="POST" id="start-button" action="{{url_for('questions', question='choose_type')}}">
         <input type="submit" value="Start"/>
       </form>
