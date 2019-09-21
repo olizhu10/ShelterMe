@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request, send_file, redirect, url_for
+from node import Node
+from path import PATH
 import sqlite3
 import os
 
 app = Flask(__name__, template_folder='templates')
-
-PATH = None
 
 @app.route('/')
 def index():
@@ -24,8 +24,19 @@ def dir_last_updated(folder):
 def locate():
     return
 
-def path():
+"""finds the next page in the sequence depending on user input"""
+@app.route('/next')
+def next(current):
+    try:
+        request.form['ind']
+    except:
+        return PATH[current].children()[].val()
+
+"""retrieves location from database"""
+@app.route('/location')
+def get_location():
     return
+
 
 
 if __name__ == '__main__':
