@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, send_file, redirect, url_for
+
 from node import Node
 from path import ROOT
 import sqlite3
@@ -13,7 +14,24 @@ def index():
 @app.route('/questions', methods=['GET','POST'])
 def questions():
     question = request.args.get('question')
-    return render_template(question+'.html', last_updated=dir_last_updated('static'))
+    role = request.args.get('role')
+    if role == 'searcher':
+        if question == 'location':
+            return redirect(url_for())
+        elif question == '':
+            pass
+        elif question == '':
+            pass
+    else:
+        if question == '':
+            pass
+        elif question == '':
+            pass
+    return question+role
+
+@app.route('/location', methods=['GET','POST'])
+def location():
+    return render_template('locationcheck.html', last_updated=dir_last_updated('static'))
 
 @app.route('/map', methods=['GET','POST'])
 def map():
