@@ -14,7 +14,7 @@ def questions():
     role = request.args.get('role')
     if role == 'searcher':
         if question == 'location':
-            pass
+            return redirect(url_for())
         elif question == '':
             pass
         elif question == '':
@@ -24,7 +24,12 @@ def questions():
             pass
         elif question == '':
             pass
-    return question
+    return question+role
+
+@app.route('/location', methods=['GET','POST'])
+def location():
+    return render_template('base.html', last_updated=dir_last_updated('static'))
+
 
 @app.route('/location', methods=['GET','POST'])
 def location():
