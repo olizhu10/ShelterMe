@@ -4,6 +4,8 @@ import os
 
 app = Flask(__name__, template_folder='templates')
 
+PATH = None
+
 @app.route('/')
 def index():
     return render_template('index.html', last_updated=dir_last_updated('static'))
@@ -11,25 +13,7 @@ def index():
 @app.route('/questions', methods=['GET','POST'])
 def questions():
     question = request.args.get('question')
-    role = request.args.get('role')
-    if role == 'searcher':
-        if question == 'location':
-            return redirect(url_for())
-        elif question == '':
-            pass
-        elif question == '':
-            pass
-    else:
-        if question == '':
-            pass
-        elif question == '':
-            pass
-    return question+role
-
-@app.route('/location', methods=['GET','POST'])
-def location():
-    return render_template('base.html', last_updated=dir_last_updated('static'))
-
+    return render_template(question+'.html', last_updated=dir_last_updated('static'))
 
 def dir_last_updated(folder):
     return str(max(os.path.getmtime(os.path.join(root_path, f))
@@ -40,10 +24,8 @@ def dir_last_updated(folder):
 def locate():
     return
 
-
-
-
-
+def path():
+    return
 
 
 if __name__ == '__main__':

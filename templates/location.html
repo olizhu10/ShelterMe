@@ -5,11 +5,11 @@
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css?u={{ last_updated }}">
   </head>
   <body>
-
-<div>
-  <form method="POST" id="start-button" action="{{url_for('questions', question='location')}}">
-    <input type="submit" value="Start"/>
-  </form>
-</div>
+    <div>
+      <form method="POST" id="start-button" action="{{url_for('questions',question='index')}}">
+        <input type="text"/>
+        <input type="submit" value="Submit"/>
+      </form>
+    </div>
 </body>
 </html
