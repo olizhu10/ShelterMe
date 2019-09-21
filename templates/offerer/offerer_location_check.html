@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1> Your offered location is: </h1>
+  <form method="GET" id="location-entered" action="/questions">
+      <h1 name = "location"></h1>
+  </form>
+  <h2>Is this correct? </h2>
+  <form method="POST" id="yes-button" action="/questions">
+    <input type="submit" value="Yes"/>
+  </form>
+  <form method="POST" id="no-button" action="/questions">
+    <input type="submit" value="No"/>
+  </form>
+{% endblock %} 
