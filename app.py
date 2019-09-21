@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, send_file, redirect, url_for
 from node import Node
-from path import PATH
+from path import ROOT
 import sqlite3
 import os
 
@@ -22,7 +22,7 @@ def dir_last_updated(folder):
 
 """implement google API to locate user"""
 def locate():
-    return
+    return 'Ithaca, NY'
 
 """finds the next page in the sequence depending on user input"""
 @app.route('/next')
@@ -30,7 +30,7 @@ def next(current):
     try:
         request.form['ind']
     except:
-        return PATH[current].children()[].val()
+        return PATH[current].children()[0].val()
 
 """retrieves location from database"""
 @app.route('/location')
