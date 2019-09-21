@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1> Enter your location </h1>
+  <form method="POST" id="location-button" action="/questions">
+      <textarea rows = "5" cols = "50" name = "description">
+
+          </textarea>
+
+        <input type = "submit" value = "submit" />
+  </form>
+{% endblock %}
