@@ -18,17 +18,17 @@
   </script>
   <script>
     var defaultBounds = new google.maps.LatLngBounds(
-    new google.maps.LatLng(-33.8902, 151.1759),
-    new google.maps.LatLng(-33.8474, 151.2631));
+      new google.maps.LatLng(-33.8902, 151.1759),
+      new google.maps.LatLng(-33.8474, 151.2631));
 
     var input = document.getElementById('searchTextField');
     var options = {
     bounds: defaultBounds,
     types: ['establishment']
     };
-    
+
     autocomplete = new google.maps.places.Autocomplete(input, options);
-</script>
+  </script>
 
   <!--Load the API from the specified URL
   * The async attribute allows the browser to render the page while the API loads
@@ -36,7 +36,7 @@
   * The callback parameter executes the initMap() function
   -->
   <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArabuyZ3-v-WcytvmRY00n_QKBajbU4B0&callback=initMap&libraries=places">
+  src="https://maps.googleapis.com/maps/api/js?key={{API_KEY}}&callback=initMap&libraries=places">
   </script>
 </div>
 {% endblock %}

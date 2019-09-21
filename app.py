@@ -6,6 +6,8 @@ import sqlite3
 import os
 
 app = Flask(__name__, template_folder='templates')
+with open('api_key.txt', 'r') as f:
+    API_KEY = f.read()
 
 @app.route('/')
 def index():
@@ -14,20 +16,7 @@ def index():
 @app.route('/questions', methods=['GET','POST'])
 def questions():
     question = request.args.get('question')
-    role = request.args.get('role')
-    if role == 'searcher':
-        if question == 'location':
-            return redirect(url_for())
-        elif question == '':
-            pass
-        elif question == '':
-            pass
-    else:
-        if question == '':
-            pass
-        elif question == '':
-            pass
-    return question+role
+    return render_template(question+'.html', last_updated=dir_last_updated('static'))
 
 @app.route('/location', methods=['GET','POST'])
 def location():
