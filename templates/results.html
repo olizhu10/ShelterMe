@@ -1,15 +1,84 @@
-{% extends "/searcher/searcher_location.html" %}
+{% extends "base.html" %}
+<!-- {% extends "/searcher/searcher_location.html" %}-->
+{% block styles %}
+<style>
+    main.parent-sidebar {border-style: solid; width: 30%; height: 100%}
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    #map {
+        height: 100%;
+
+    }
+      /* Optional: Makes the sample page fill the window. */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+    }
+</style>
+{% endblock %}
+
 {% block content %}
-<div class="pac-card" id="pac-card">
-  <div id="pac-container">
-    <input id="pac-input" type="text"
-        placeholder="Enter a location">
-  </div>
-</div>
-<div id="map"></div>
-<div id="infowindow-content">
-  <img src="" width="16" height="16" id="place-icon">
-  <span id="place-name"  class="title"></span><br>
-  <span id="place-address"></span>
-</div>
+<!--
+<main class = "parent-sidebar">
+    <aside class = "sidebar">
+        <header class = "sidebar-header">
+            <h1>Address</h1>
+            <h2> Can accommodate 4 people </h2>
+            <h2> Can supply food - breakfast </h2>
+            <h2> Can host people for 1 month </h2>
+            <h2> Can accommodate people with allergies </h2>
+        </header>
+    </asider>
+</main>
+<script>
+
+</script>
+-->
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: {lat: 42.445222, lng: -76.481080}
+        });
+
+
+        // Display the area between the location southWest and northEast.
+
+        // Add 5 markers to map at random locations.
+        // For each of these markers, give them a title with their index, and when
+        // they are clicked they should open an infowindow with text from a secret
+        // message.
+        var shelterDescription = ['Shelter 1', 'Shelter 2', 'Shelter 3', 'Shelter 4', 'Shelter 5'];
+        var lat = [42.443292, 42.437052, 42.440190, 42.440532, 42.444832]
+        var long = [-76.509362, -76.499853, -76.496953, -76.499775, -76.482336]
+        for (var i = 0; i < shelterDescription.length; ++i) {
+          var marker = new google.maps.Marker({
+            position: {
+              lat: lat[i],
+              lng: long[i]
+            },
+            map: map
+          });
+          attachDescription(marker, shelterDescription[i]);
+        }
+      }
+
+      // Attaches an info window to a marker with the provided message. When the
+      // marker is clicked, the info window will open with the secret message.
+      function attachDescription(marker, description) {
+        var infowindow = new google.maps.InfoWindow({
+          content: description
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(marker.get('map'), marker);
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key={{API_KEY}}&callback=initMap">
+    </script>
 {% endblock %}

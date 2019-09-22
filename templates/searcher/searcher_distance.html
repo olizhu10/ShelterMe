@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
     <h1> How far are you willing to travel to find shelter? </h1>
-    <form method="POST" id="mile-button" action="/result">
+    <form method="POST" id="mile-button" action="/results">
       <input type="submit" value="1-3 miles"/>
     </form>
-    <form method="POST" id="fourmiles-button" action="/result">
+    <form method="POST" id="fourmiles-button" action="/results">
       <input type="submit" value="4-9 miles"/>
     </form>
-    <form method="POST" id="tenmiles-button" action="/result">
+    <form method="POST" id="tenmiles-button" action="/results">
       <input type="submit" value="10+ miles"/>
     </form>
 {% endblock %}
