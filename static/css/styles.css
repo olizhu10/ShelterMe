@@ -51,6 +51,7 @@ html, body {
   margin: 0;
   padding: 0;
   text-align: center;
+  font-family: 'HKGrotesk Regular';
 }
 #description {
   font-family: Roboto;
@@ -175,14 +176,10 @@ button:hover {
   color: #ffffff;
 }
 
-.twobuttons {
-  text-align: center;
-}
-
 #looking-button, #offering-button {
   display: inline-block;
   height: 200px;
-  padding-top: 1se00px;
+  padding-top: 100px;
   box-sizing: content-box;
   padding-right: 10px;
 }
@@ -232,6 +229,10 @@ li {
   border-radius: 12px;
   margin: 5px;
   border-color: #D8D8D8;
+}
+
+.centered {
+  display: inline-block;
 }
 
 #breakfast-label, #lunch-label, #dinner-label {

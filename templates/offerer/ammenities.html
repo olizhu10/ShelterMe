@@ -2,46 +2,55 @@
 {% block content %}
   <div class="welcome">
     <h1> Select other ammenities you can offer. </h1>
-    <form method="POST" id="charging-button" action="offerer_results">
-      <div class="centered">
+    <div class="centered">
+      <form method="POST" id="charging-button" action="offerer_results">
         <div class="checkbox">
-          <input type="checkbox" name="charging stations"/>
+          <input type="checkbox" name="charging stations" id="charge-label"/>
           <label for="charging stations">Charging Stations</label>
         </div>
+
         <div class="checkbox">
-          <input type="checkbox" name="water"/>
+          <input type="checkbox" name="water" id="water-label"/>
           <label for="water">Water</label>
         </div>
+
         <div class="checkbox">
-          <input type="checkbox" name="first aid kits"/>
+          <input type="checkbox" name="first aid kits" id="firstaid-label"/>
           <label for="first aid kits">First-aid Kits</label>
         </div>
+
         <div class="checkbox">
           <input type="checkbox" name="showers"/>
           <label for="showers">Showers</label>
         </div>
+
         <div class="checkbox">
           <input type="checkbox" name="bathrooms"/>
           <label for="showers">Bathrooms</label>
         </div>
+
         <div class="checkbox">
           <input type="checkbox" name="hygiene products"/>
           <label for="hygiene products">Hygiene Products</label>
         </div>
+
         <div class="checkbox">
           <input type="checkbox" name="pet friendly"/>
           <label for="pet friendly">Pet-friendly</label>
         </div>
+
         <div class="checkbox">
           <input type="checkbox" name="other"/>
           <label for="other">Other</label>
         </div>
+
         <div class="checkbox">
           <input type="checkbox" name="none"/>
           <label for="none">None</label>
         </div>
-      </div>
-      <button type="submit">CONTINUE</button>
-    </form>
+
+        <button type="submit">CONTINUE</button>
+      </form>
+    </div>
   </div>
 {% endblock %}
