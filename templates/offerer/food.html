@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
   <h1> Can you supply food?</h1>
-  <form method="POST" id="yes-button" action="/questions">
+  <form method="POST" id="yes-button" action="{{url_for('questions', question='offerer/food_options')}}">
     <input type="submit" value="Yes"/>
   </form>
-  <form method="POST" id="no-button" action="/questions">
+  <form method="POST" id="no-button" action="{{url_for('questions', question='offerer/accommodation_time')}}">
     <input type="submit" value="no"/>
   </form>
 {% endblock %}

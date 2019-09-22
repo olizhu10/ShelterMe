@@ -5,10 +5,12 @@
       <h1 name = "location"></h1>
   </form>
   <h2>Is this correct? </h2>
-  <form method="POST" id="yes-button" action="{{url_for('questions', question='searcher_number')}}">
+  <form method="POST" id="yes-button" action="{{url_for('questions', question='/searcher/searcher_number')}}">
     <input type="submit" value="Yes"/>
   </form>
-  <form method="POST" id="no-button" action="{{url_for('questions', question='searcher_number')}}">
+  <form method="POST" id="no-button" action="{{url_for('questions', question='/searcher/searcher_number')}}">
     <input type="submit" value="No"/>
   </form>
+{% endblock %}
+{% block scripts %}
 {% endblock %}

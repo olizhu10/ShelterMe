@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1> Can you accomodate people with special needs?</h1>
+  <form method="POST" id="yes-button" action="{{url_for('questions', question='offerer/special_needs')}}">
+    <input type="submit" value="Yes"/>
+  </form>
+  <form method="POST" id="no-button" action="{{url_for('questions', question='offerer/ammenities')}}">
+    <input type="submit" value="no"/>
+  </form>
+{% endblock %}

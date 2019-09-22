@@ -1,0 +1,15 @@
+{% extends "/searcher/searcher_location.html" %}
+{% block content %}
+<div class="pac-card" id="pac-card">
+  <div id="pac-container">
+    <input id="pac-input" type="text"
+        placeholder="Enter a location">
+  </div>
+</div>
+<div id="map"></div>
+<div id="infowindow-content">
+  <img src="" width="16" height="16" id="place-icon">
+  <span id="place-name"  class="title"></span><br>
+  <span id="place-address"></span>
+</div>
+{% endblock %}
