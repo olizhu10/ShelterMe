@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-<<<<<<< HEAD
   <div class="welcome">
   <h1> Are you looking for shelter or offering shelter? </h1>
     <div class="twobuttons">
@@ -12,13 +11,4 @@
       </form>
     </div>
   </div>
-=======
-    <h1> Are you looking for shelter or offering shelter? </h1>
-  <form method="POST" id="looking-button" action="{{url_for('questions', question='/searcher/searcher_location')}}">
-    <input type="submit" value="Looking for shelter"/>
-  </form>
-  <form method="POST" id="offering-button" action="{{url_for('questions', question='/searcher/offerer_location')}}">
-    <input type="submit" value="Offering Shelter"/>
-  </form>
->>>>>>> 7e8188a14ce9deefcdd2a73ccaa71d138df925e1
 {% endblock %}
