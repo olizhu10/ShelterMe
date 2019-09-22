@@ -6,7 +6,7 @@
       </div>
       <div id="pac-container">
         <br>
-        <form id="pac=form" method="POST" action="{{url_for('questions', question='/searcher/searcher_number')}}">
+        <form id="pac=form" method="POST" action="{{url_for('questions', question='/offerer/offerer_number')}}">
         <input id="pac-input" type="text"
             placeholder="Enter a location">
         </form>
@@ -27,7 +27,7 @@
 
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 42.4440, lng: 76.5019},
+          center: {lat: 42.4440, lng: -76.5019},
           zoom: 13
         });
         var card = document.getElementById('pac-card');
