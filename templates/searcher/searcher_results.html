@@ -8,7 +8,7 @@
     #map {
         height: 100%;
         width: 70%;
-        left: 30%
+        left: 30%;
     }
       /* Optional: Makes the sample page fill the window. */
     html, body {
@@ -52,8 +52,8 @@
 -->
     <div id="sidepanel" class="sidepanel">
       <h1>Shelter Name</h1>
-      <h4>Type of Shelter</h4>
-      <img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjf4ZO22uPkAhXKm-AKHbk8BBIQjRx6BAgBEAQ&url=https%3A%2F%2Fevents.cornell.edu%2Fduffield_hall&psig=AOvVaw1dWTsVljhosuzIeAQRWwdH&ust=1569216840754464">
+      <h3>Type of Shelter</h3>
+      <img id="pic" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Duffield_Hall_%28Cornell_University%29.jpg">
       <div id="nav-bar">
         <button type="submit" id="directions" class="circle-button"/>
         <label for="directions">Directions</label>
@@ -61,12 +61,19 @@
         <label for="save">Save</label>
         <button type="submit" id="share" class="circle-button"/>
         <label for="Share">Share</label>
-        <button type="submit"></button>
-        <button type="submit"></button>
       </div>
       <div id="info">
+        <p>Phone number</p>
+        <p>Email</p>
+        <p>Distance to location</p>
       </div>
-      <div id="amenities">
+      <div id="amenities-container">
+        {% for amenity in amenities %}
+        {% endfor %}
+          <div class="amenities">
+            <img src
+          </div>
+
       </div>
     </div>
     <div id="map"></div>

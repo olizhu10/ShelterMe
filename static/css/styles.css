@@ -42,8 +42,11 @@
 
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
-#map {
+#map .location {
   height: 100%;
+  width: 50%;
+  left: 50%;
+
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -70,6 +73,9 @@ html, body {
   display: inline;
 }
 
+#pic {
+  width: 100%;
+}
 .pac-card {
   margin: 10px 10px 0 0;
   border-radius: 2px 0 0 2px;
