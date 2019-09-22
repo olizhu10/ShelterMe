@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1> Are you looking for shelter or offering shelter? </h1>
-  <form method="POST" id="looking-button" action="{{url_for('questions', question='searcher_location')}}">
-    <input type="submit" value="Looking for shelter"/>
-  </form>
-  <form method="POST" id="offering-button" action="{{url_for('questions', question='offerer_location')}}">
-    <input type="submit" value="Offering Shelter"/>
-  </form>
+  <div class="welcome">
+  <h1> Are you looking for shelter or offering shelter? </h1>
+    <div class="twobuttons">
+      <form method="POST" id="looking-button" action="{{url_for('questions', question='searcher_location')}}">
+        <button type="submit">Looking for Shelter</button>
+      </form>
+      <form method="POST" id="offering-button" action="{{url_for('questions', question='offerer_location')}}">
+        <button type="submit">Offering Shelter</button>
+      </form>
+    </div>
+  </div>
 {% endblock %}
