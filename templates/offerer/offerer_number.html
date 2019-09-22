@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
+  <div class="welcome">
     <h1> How many people can you accommodate? </h1>
     <form method="POST" id="one-button" action="{{url_for('questions',question='offerer/food')}}">
-      <input type="submit" value="1 person"/>
+      <button type="submit">1 person</button>
     </form>
     <form method="POST" id="two-button" action="{{url_for('questions',question='offerer/food')}}">
-      <input type="submit" value="2-4 people"/>
+      <button type="submit">2-4 people</button>
     </form>
     <form method="POST" id="five-button" action="{{url_for('questions',question='offerer/food')}}">
-      <input type="submit" value="5+ people"/>
+      <button type="submit">5+ people</button>
     </form>
+  </div>
 {% endblock %}

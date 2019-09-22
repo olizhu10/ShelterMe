@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+  <div class="welcome">
     <h1> Select the conditions that you can accomodate. </h1>
     <form method="POST" id="diabetes-button" action="{{url_for('questions', question='offerer/ammenities')}}">
       <div>
@@ -20,4 +21,5 @@
       </div>
       <input type="submit" value="Submit"/>
     </form>
+  </div>
 {% endblock %}
