@@ -180,3 +180,17 @@ button:hover {
   padding-top: 100px;
   padding-right: 10px;
 }
+
+#yes-button, #no-button {
+  display: inline-block;
+  height: 200px;
+  padding-top: 100px;
+  padding-right: 10px;
+}
+
+#breakfast-button, #lunch-button, #dinner-button {
+  display: inline-block;
+  height: 200px;
+  padding-top: 100px;
+  padding-right: 10px;
+}

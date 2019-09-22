@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
+  <div class ="welcome">
     <h1> What kind of meals can you offer? </h1>
     <form method="POST" id="breakfast-button" action="{{url_for('questions', question='offerer/accommodation_time')}}">
-      <input type="submit" value="Breakfast"/>
+      <button type="submit">Breakfast</button>
     </form>
     <form method="POST" id="lunch-button" action="{{url_for('questions', question='offerer/accommodation_time')}}">
-      <input type="submit" value="Lunch"/>
+      <button type="submit">Lunch</button>
     </form>
     <form method="POST" id="dinner-button" action="{{url_for('questions', question='offerer/accommodation_time')}}">
-      <input type="submit" value="Dinner"/>
+      <button type="submit">Dinner</button>
     </form>
+  </div>
 {% endblock %}
