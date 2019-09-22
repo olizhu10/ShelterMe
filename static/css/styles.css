@@ -123,10 +123,10 @@ h1 {
   text-align: center;
   font-size: 30px;
   margin: 40px;
+  font-family: 'HKGrotesk Extra Bold';
 }
 
 #introduction {
-  font-family: 'HKGrotesk Extra Bold';
   text-align: center;
   height: 200px;
   font-size: 50px;
