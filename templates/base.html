@@ -3,30 +3,65 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css?u={{ last_updated }}">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #locationField, #controls {
+        position: relative;
+        width: 480px;
+      }
+      #autocomplete {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 99%;
+      }
+      .label {
+        text-align: right;
+        font-weight: bold;
+        width: 100px;
+        color: #303030;
+        font-family: "Roboto";
+      }
+      #address {
+        border: 1px solid #000090;
+        background-color: #f0f9ff;
+        width: 480px;
+        padding-right: 2px;
+      }
+      #address td {
+        font-size: 10pt;
+      }
+      .field {
+        width: 99%;
+      }
+      .slimField {
+        width: 80px;
+      }
+      .wideField {
+        width: 200px;
+      }
+      #locationField {
+        height: 20px;
+        margin-bottom: 2px;
+      }
+    </style>
   </head>
   <body>
-    <div>
+
       {% block content %}
       {% endblock %}
-    </div>
-      <!--
-      <script src="/__/firebase/6.6.1/firebase-app.js"></script>
+      {% block map %}
+      {% endblock %}
 
-      <script src="/__/firebase/6.6.1/firebase-auth.js"></script>
-      <script src="/__/firebase/6.6.1/firebase-firestore.js"></script>
-
-      <script src="/__/firebase/init.js"></ script>
-      <script>
-        const firebaseConfig = {
-        apiKey: "AIzaSyCsFj3wpQd8XBOcHA-IEz-sVCPPr2AziAA",
-        authDomain: "bigredhacks2k19.firebaseapp.com",
-        databaseURL: "https://bigredhacks2k19.firebaseio.com",
-        projectId: "bigredhacks2k19",
-        storageBucket: "bigredhacks2k19.appspot.com",
-        messagingSenderId: "936483026257",
-        appId: "1:936483026257:web:607c626e0fff3b94350f70"
-        };
-      </script>
-    -->
   </body>
 </html
