@@ -11,7 +11,9 @@ food_options = Node('food_options', [accommodation_time])
 
 food = Node('food', [food_options, accommodation_time])
 
-searcher_distance = Node('searcher_distance', [])
+results = Node('results', [])
+
+searcher_distance = Node('searcher_distance', [results])
 
 searcher_number = Node('searcher_number', [searcher_distance])
 offerer_number = Node('offerer_number', [food])
