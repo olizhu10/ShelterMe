@@ -2,14 +2,20 @@
 {% block content %}
   <div class ="welcome">
     <h1> What kind of meals can you offer? </h1>
-    <form method="POST" id="breakfast-button" action="{{url_for('questions', question='offerer/accommodation_time')}}">
-      <button type="submit">Breakfast</button>
-    </form>
-    <form method="POST" id="lunch-button" action="{{url_for('questions', question='offerer/accommodation_time')}}">
-      <button type="submit">Lunch</button>
-    </form>
-    <form method="POST" id="dinner-button" action="{{url_for('questions', question='offerer/accommodation_time')}}">
-      <button type="submit">Dinner</button>
+    <form method="POST" action="{{url_for('questions', question='offerer/accommodation_time')}}">
+      <div>
+        <input type="checkbox" value="Breakfast" name="breakfast"/>
+        <label for="breakfast">Breakfast</label>
+      </div>
+      <div>
+        <input type="checkbox" value="Lunch" name="lunch"/>
+        <label for="lunch">Lunch</label>
+      </div>
+      <div>
+        <input type="checkbox" value="Dinner" name="dinner"/>
+        <label for="dinner">Dinner</label>
+      </div>
+      <input type="submit" value="Submit"/>
     </form>
   </div>
 {% endblock %}

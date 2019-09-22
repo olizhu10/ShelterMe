@@ -25,9 +25,14 @@ def map():
     return render_template('map.html', last_updated=dir_last_updated('static'),
         loc=loc, API_KEY=API_KEY)
 
-@app.route('/results', methods=['GET','POST'])
-def results():
-    return render_template('results.html', last_updated=dir_last_updated('static'),
+@app.route('/searcher_results', methods=['GET','POST'])
+def searcher_results():
+    return render_template('/searcher/searcher_results.html', last_updated=dir_last_updated('static'),
+        API_KEY=API_KEY)
+
+@app.route('/offerer_results', methods=['GET','POST'])
+def offerer_results():
+    return render_template('/offerer/offerer_results.html', last_updated=dir_last_updated('static'),
         API_KEY=API_KEY)
 
 @app.route('/postmethod', methods = ['POST'])
