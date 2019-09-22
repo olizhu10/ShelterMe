@@ -35,12 +35,6 @@
   }
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
 #map {
@@ -118,4 +112,56 @@ html, body {
   font-size: 25px;
   font-weight: 500;
   padding: 6px 12px;
+}
+
+.welcome {
+  padding-top: 155px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  margin: 40px;
+}
+
+#introduction {
+  font-family: 'HK Grotesk Extra Bold';
+  text-align: center;
+  height: 200px;
+  font-size: 50px;
+}
+
+.ShelterMe {
+  font-style: normal;
+  color: #1D73E8;
+}
+
+button {
+  font-family: "HKGrotesk Semi Bold";
+  background-color: #E5EEF9;
+  text-align: center;
+  font-size: 16px;
+  color: #000000;
+  border-radius: 16px;
+  width: 158px;
+  height: 48px;
+  transition-duration: 0.4s;
+  border-style: none;
+}
+
+button:hover {
+  background-color: #1D73E8;
+  color: #ffffff;
+}
+
+.twobuttons {
+  text-align: center;
+}
+
+#looking-button, #offering-button {
+  display: inline-block;
+  height: 200px;
+  padding-top: 200px;
+  box-sizing: content-box;
 }
