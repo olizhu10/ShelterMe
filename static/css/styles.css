@@ -194,3 +194,17 @@ button:hover {
   padding-top: 100px;
   padding-right: 10px;
 }
+
+#days-button, #weeks-button, #months-button {
+  display: inline-block;
+  height: 200px;
+  padding-top: 100px;
+  padding-right: 10px;
+}
+
+#diabetes-button, #foodallergies-button, #otherallergies-button, #glutenfree-button {
+  display: inline-block;
+  height: 200px;
+  padding-top: 100px;
+  padding-right: 10px;
+}

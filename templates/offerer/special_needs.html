@@ -1,16 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
+  <div class="welcome">
     <h1> Select the conditions that you can accomodate. </h1>
     <form method="POST" id="diabetes-button" action="{{url_for('questions', question='offerer/ammenities')}}">
-      <input type="submit" value="diabetes"/>
+      <button type="submit">Diabetes</button>
     </form>
     <form method="POST" id="foodallergies-button" action="{{url_for('questions', question='offerer/ammenities')}}">
-      <input type="submit" value="food allergies"/>
+      <button type="submit">Food Allergies</button>
     </form>
     <form method="POST" id="otherallergies-button" action="{{url_for('questions', question='offerer/ammenities')}}">
-      <input type="submit" value="other allergies"/>
+      <button type="submit">Other Allergies</button>
     </form>
     <form method="POST" id="glutenfree-button" action="{{url_for('questions', question='offerer/ammenities')}}">
-      <input type="submit" value="gluten free"/>
+      <button type="submit">Gluten Free</button>
     </form>
+  </div>
 {% endblock %}

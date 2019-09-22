@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
+  <div class="welcome">
     <h1> How long can you host people for? </h1>
     <form method="POST" id="days-button" action="{{url_for('questions', question='offerer/special_needs_ask')}}">
-      <input type="submit" value="< 7 days"/>
+      <button type="submit">&lt; 7 days</button>
     </form>
     <form method="POST" id="weeks-button" action="{{url_for('questions', question='offerer/special_needs_ask')}}">
-      <input type="submit" value="< 4 weeks"/>
+      <button type="submit">&lt; 4 weeks</button>
     </form>
     <form method="POST" id="months-button" action="{{url_for('questions', question='offerer/special_needs_ask')}}">
-      <input type="submit" value="> 1 month"/>
+      <button type="submit">&gt; 1 month</button>
     </form>
+  </div>
 {% endblock %}
