@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
     <h1> How many people are you bringing with you? </h1>
-    <form method="POST" id="one-button" action="{{url_for('questions', question='searcher_distance')}}">
+    <form method="POST" id="one-button" action="{{url_for('questions', question='searcher/searcher_distance')}}">
       <input type="submit" value="1 person"/>
     </form>
-    <form method="POST" id="two-button" action="{{url_for('questions', question='searcher_distance')}}">
+    <form method="POST" id="two-button" action="{{url_for('questions', question='searcher/searcher_distance')}}">
       <input type="submit" value="2-4 people"/>
     </form>
-    <form method="POST" id="five-button" action="{{url_for('questions', question='searcher_distance')}}">
+    <form method="POST" id="five-button" action="{{url_for('questions', question='searcher/searcher_distance')}}">
       <input type="submit" value="5+ people"/>
     </form>
 {% endblock %}
