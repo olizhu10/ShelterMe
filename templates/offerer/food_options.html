@@ -3,19 +3,19 @@
   <div class ="welcome">
     <h1> What kind of meals can you offer? </h1>
     <form method="POST" action="{{url_for('questions', question='offerer/accommodation_time')}}">
-      <div>
-        <input type="checkbox" value="Breakfast" name="breakfast"/>
+      <div class="checkbox">
+        <input type="checkbox" value="Breakfast" id="breakfast-label" name="breakfast"/>
         <label for="breakfast">Breakfast</label>
       </div>
-      <div>
-        <input type="checkbox" value="Lunch" name="lunch"/>
+      <div class="checkbox">
+        <input type="checkbox" value="Lunch" id="lunch-label" name="lunch"/>
         <label for="lunch">Lunch</label>
       </div>
-      <div>
-        <input type="checkbox" value="Dinner" name="dinner"/>
+      <div class="checkbox">
+        <input type="checkbox" value="Dinner" id="dinner-label" name="dinner"/>
         <label for="dinner">Dinner</label>
       </div>
-      <input type="submit" value="Submit"/>
+      <button type="submit">CONTINUE</button>
     </form>
   </div>
 {% endblock %}

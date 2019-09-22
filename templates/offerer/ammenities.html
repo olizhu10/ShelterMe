@@ -1,43 +1,47 @@
 {% extends "base.html" %}
 {% block content %}
+  <div class="welcome">
     <h1> Select other ammenities you can offer. </h1>
     <form method="POST" id="charging-button" action="offerer_results">
-      <div>
-        <input type="checkbox" name="charging stations"/>
-        <label for="charging stations">Charging Stations</label>
+      <div class="centered">
+        <div class="checkbox">
+          <input type="checkbox" name="charging stations"/>
+          <label for="charging stations">Charging Stations</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="water"/>
+          <label for="water">Water</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="first aid kits"/>
+          <label for="first aid kits">First-aid Kits</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="showers"/>
+          <label for="showers">Showers</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="bathrooms"/>
+          <label for="showers">Bathrooms</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="hygiene products"/>
+          <label for="hygiene products">Hygiene Products</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="pet friendly"/>
+          <label for="pet friendly">Pet-friendly</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="other"/>
+          <label for="other">Other</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="none"/>
+          <label for="none">None</label>
+        </div>
       </div>
-      <div>
-        <input type="checkbox" name="water"/>
-        <label for="water">Water</label>
-      </div>
-      <div>
-        <input type="checkbox" name="first aid kits"/>
-        <label for="first aid kits">First-aid Kits</label>
-      </div>
-      <div>
-        <input type="checkbox" name="showers"/>
-        <label for="showers">Showers</label>
-      </div>
-      <div>
-        <input type="checkbox" name="bathrooms"/>
-        <label for="showers">Bathrooms</label>
-      </div>
-      <div>
-        <input type="checkbox" name="hygiene products"/>
-        <label for="hygiene products">Hygiene Products</label>
-      </div>
-      <div>
-        <input type="checkbox" name="pet friendly"/>
-        <label for="pet friendly">Pet-friendly</label>
-      </div>
-      <div>
-        <input type="checkbox" name="other"/>
-        <label for="other">Other</label>
-      </div>
-      <div>
-        <input type="checkbox" name="none"/>
-        <label for="none">None</label>
-      </div>
-      <input type="submit" value="submit"/>
+      <button type="submit">CONTINUE</button>
     </form>
+  </div>
 {% endblock %}

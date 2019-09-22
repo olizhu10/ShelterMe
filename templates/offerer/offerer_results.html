@@ -2,22 +2,30 @@
 {% block content %}
   <div class="welcome">
     <h1> Summary of your shelter </h1>
-    <h2>Shelter Location</h2>
-    <h3 id = "loc"></h3>
-    <h2>Accommodations</h2>
-    <ul id = "myAccommodationsUl"></ul>
-    <h2>Number of people to accommodate</h2>
-    <h3 id = "numPeople" </h3>
-    <h2>Supplies food</h2>
-    <h3 id = "supFood"></h3>
-    <h2>Kind of meals to offer</h2>
-    <ul id="myMealUl"></ul>
-    <h2>Number of days to accommodate</h2>
-    <h3 id = "numDays"> </h3>
-    <h2>Accommodates Special Needs?</h2>
-    <h3 id = "accom"></h3>
-    <h2>Medical Conditions</h2>
-    <ul id="myConditionsUl"></ul>
+
+      <h2>Shelter Location</h2>
+        <h3 id = "loc"></h3>
+
+      <h2>Accommodations</h2>
+        <ul id = "myAccommodationsUl"></ul>
+
+      <h2>Number of people to accommodate</h2>
+        <h3 id = "numPeople" </h3>
+
+      <h2>Supplies food</h2>
+        <h3 id = "supFood"></h3>
+
+      <h2>Kind of meals to offer</h2>
+        <ul id="myMealUl"></ul>
+
+      <h2>Number of days to accommodate</h2>
+        <h3 id = "numDays"> </h3>
+
+      <h2>Accommodates Special Needs?</h2>
+        <h3 id = "accom"></h3>
+
+      <h2>Medical Conditions</h2>
+        <ul id="myConditionsUl"></ul>
   </div>
 
   <script>
@@ -28,7 +36,7 @@
         li.appendChild(text);
         document.getElementById("myMealUl").appendChild(li);
     };
-    var accommodations = ["Charging Stations", "Water", "Bathrooms"]
+    var accommodations = ["Diabetes", "Food Allergies", "Gluten-free"]
     for (i = 0; i < accommodations.length; i++) {
         var li = document.createElement("li");
         var text = document.createTextNode(accommodations[i]);

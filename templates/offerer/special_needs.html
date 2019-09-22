@@ -3,23 +3,23 @@
   <div class="welcome">
     <h1> Select the conditions that you can accomodate. </h1>
     <form method="POST" id="diabetes-button" action="{{url_for('questions', question='offerer/ammenities')}}">
-      <div>
+      <div class="checkbox">
         <input type="checkbox" name="diabetes"/>
         <label for="diabetes">Diabetes</label>
       </div>
-      <div>
+      <div class="checkbox">
         <input type="checkbox" name="food allergies"/>
         <label for="food allergies">Food Allergies</label>
       </div>
-      <div>
+      <div class="checkbox">
         <input type="checkbox" name="other allergies"/>
         <label for="other allergies">Other Allergies</label>
       </div>
-      <div>
+      <div class="checkbox">
         <input type="checkbox" value="gluten free"/>
         <label for="gluten free">Gluten-free</label>
       </div>
-      <input type="submit" value="Submit"/>
+      <button type="submit">CONTINUE</button>
     </form>
   </div>
 {% endblock %}

@@ -12,6 +12,11 @@
    src: url('fonts/HKGrotesk-SemiBold.otf');
  }
 
+ @font-face {
+   font-family: 'HKGrotesk Regular';
+   src: url('fonts/HKGrotesk-Regular.otf');
+ }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -45,6 +50,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 #description {
   font-family: Roboto;
@@ -126,6 +132,20 @@ h1 {
   font-family: 'HKGrotesk Extra Bold';
 }
 
+h2 {
+  text-align: center;
+  font-size: 22px;
+  margin: 40px;
+  font-family: 'HKGrotesk Extra Bold';
+}
+
+h3 {
+  text-align: center;
+  font-size: 15px;
+  margin: 40px;
+  font-family: 'HKGrotesk Regular';
+}
+
 #introduction {
   text-align: center;
   height: 200px;
@@ -188,13 +208,6 @@ button:hover {
   padding-right: 10px;
 }
 
-#breakfast-button, #lunch-button, #dinner-button {
-  display: inline-block;
-  height: 200px;
-  padding-top: 100px;
-  padding-right: 10px;
-}
-
 #days-button, #weeks-button, #months-button {
   display: inline-block;
   height: 200px;
@@ -207,4 +220,25 @@ button:hover {
   height: 200px;
   padding-top: 100px;
   padding-right: 10px;
+}
+
+li {
+  text-align: center;
+}
+
+.checkbox {
+  width: 150px;
+  border-style: solid;
+  border-radius: 12px;
+  margin: 5px;
+  border-color: #D8D8D8;
+}
+
+#breakfast-label, #lunch-label, #dinner-label {
+  display: inline;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
 }
