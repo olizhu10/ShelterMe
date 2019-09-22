@@ -1,7 +1,7 @@
 # ShelterMe
 Created by: Avani Aggrwal, Jimena Fernandez, Gracie Jing, Olivia Zhu
 
-**Find shelter or offer shelter in times of natural disasters.**
+**Find or offer shelter in times of natural disasters.**
 
 ShelterMe is a web app created to help people in the face of natural disasters. People have the ability to choose whether they are searching for shelter or offering shelter. 
 
