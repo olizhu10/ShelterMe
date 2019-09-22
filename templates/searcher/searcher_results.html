@@ -7,12 +7,28 @@
        * element that contains the map. */
     #map {
         height: 100%;
+        width: 70%;
+        left: 30%
     }
       /* Optional: Makes the sample page fill the window. */
     html, body {
         height: 100%;
         margin: 0;
         padding: 0;
+    }
+    .sidepanel {
+      height: 100%; /* Full-height: remove this if you want "auto" height */
+      width: 30%; /* Set the width of the sidebar */
+      position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1; /* Stay on top */
+      top: 0; /* Stay at the top */
+      left: 0;
+      background-color: #fff;
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 20px;
+    }
+    .circle-button {
+      border-radius: 100px;
     }
 </style>
 {% endblock %}
@@ -34,10 +50,24 @@
 
 </script>
 -->
-    <div id="sidepanel">
-      <title>Shelter Name</title>
+    <div id="sidepanel" class="sidepanel">
+      <h1>Shelter Name</h1>
       <h4>Type of Shelter</h4>
       <img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjf4ZO22uPkAhXKm-AKHbk8BBIQjRx6BAgBEAQ&url=https%3A%2F%2Fevents.cornell.edu%2Fduffield_hall&psig=AOvVaw1dWTsVljhosuzIeAQRWwdH&ust=1569216840754464">
+      <div id="nav-bar">
+        <button type="submit" id="directions" class="circle-button"/>
+        <label for="directions">Directions</label>
+        <button type="submit" id="save" class="circle-button"/>
+        <label for="save">Save</label>
+        <button type="submit" id="share" class="circle-button"/>
+        <label for="Share">Share</label>
+        <button type="submit"></button>
+        <button type="submit"></button>
+      </div>
+      <div id="info">
+      </div>
+      <div id="amenities">
+      </div>
     </div>
     <div id="map"></div>
 
