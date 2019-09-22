@@ -5,10 +5,17 @@
       <h1 name = "location"></h1>
   </form>
   <h2>Is this correct? </h2>
+<<<<<<< HEAD
   <form method="POST" id="yes-button" action="{{url_for('questions', question='/searcher/searcher_number')}}">
     <input type="submit" value="Yes"/>
   </form>
   <form method="POST" id="no-button" action="{{url_for('questions', question='/searcher/searcher_number')}}">
+=======
+  <form method="POST" id="yes-button" action="{{url_for('questions', question='searcher/searcher_number')}}">
+    <input type="submit" value="Yes"/>
+  </form>
+  <form method="POST" id="no-button" action="{{url_for('questions', question='searcher/searcher_number')}}">
+>>>>>>> 857236f26e7a37f1af1168f71fe95e81fabd324a
     <input type="submit" value="No"/>
   </form>
 {% endblock %}

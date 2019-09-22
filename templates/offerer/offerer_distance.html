@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1> How many  </h1>
+    <form method="POST" id="mile-button" action="{{url_for('questions', question='searcher/searcher_distance')}}">
+      <input type="submit" value="1-3 miles"/>
+    </form>
+    <form method="POST" id="fourmiles-button" action="/questions">
+      <input type="submit" value="4-9 miles"/>
+    </form>
+    <form method="POST" id="tenmiles-button" action="/questions">
+      <input type="submit" value="10+ miles"/>
+    </form>
+{% endblock %}
