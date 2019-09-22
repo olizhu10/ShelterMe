@@ -30,6 +30,14 @@
     .circle-button {
       border-radius: 100px;
     }
+    .subtitle {
+      font-family: 'HKGrotesk Extra Bold';
+      text-align: left;
+    }
+    .amenities {
+      text-align: left;
+    }
+
 </style>
 {% endblock %}
 
@@ -68,13 +76,20 @@
         <p>Distance to location</p>
       </div>
       <div id="amenities-container">
+        <h2 class="subtitle">Amenities</h2>
         {% for amenity in amenities %}
         {% endfor %}
           <div class="amenities">
-            <img src
+            <ul>
+              <li>Charging Stations</li>
+              <li>Water</li>
+              <li>Showers</li>
+              <li>Bathrooms</li>
+            </ul>
           </div>
-
       </div>
+      <br>
+      <br>
     </div>
     <div id="map"></div>
 
