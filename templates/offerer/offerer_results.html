@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="welcome">
+    <h1> Summary of your shelter </h1>
+    <h2>Shelter Location</h2>
+    <h3 id = "loc"></h3>
+    <h2>Accommodations</h2>
+    <ul id = "myAccommodationsUl"></ul>
+    <h2>Number of people to accommodate</h2>
+    <h3 id = "numPeople" </h3>
+    <h2>Supplies food</h2>
+    <h3 id = "supFood"></h3>
+    <h2>Kind of meals to offer</h2>
+    <ul id="myMealUl"></ul>
+    <h2>Number of days to accommodate</h2>
+    <h3 id = "numDays"> </h3>
+    <h2>Accommodates Special Needs?</h2>
+    <h3 id = "accom"></h3>
+    <h2>Medical Conditions</h2>
+    <ul id="myConditionsUl"></ul>
+  </div>
+
+  <script>
+    var meals = ["Breakfast", "Lunch", "Dinner"]
+    for (i = 0; i < meals.length; i++) {
+        var li = document.createElement("li");
+        var text = document.createTextNode(meals[i]);
+        li.appendChild(text);
+        document.getElementById("myMealUl").appendChild(li);
+    };
+    var accommodations = ["Charging Stations", "Water", "Bathrooms"]
+    for (i = 0; i < accommodations.length; i++) {
+        var li = document.createElement("li");
+        var text = document.createTextNode(accommodations[i]);
+        li.appendChild(text);
+        document.getElementById("myAccommodationsUl").appendChild(li);
+    };
+    var conditions = ["Physical Disability", "Allergies", "Asthma"]
+    for (i = 0; i < conditions.length; i++) {
+        var li = document.createElement("li");
+        var text = document.createTextNode(conditions[i]);
+        li.appendChild(text);
+        document.getElementById("myConditionsUl").appendChild(li);
+    };
+    var loc = "Duffield Hall"
+    document.getElementById("loc").innerHTML = loc;
+    var numPeople = "5+ people "
+    document.getElementById("numPeople").innerHTML = numPeople;
+    var supFood = "Yes "
+    document.getElementById("supFood").innerHTML = supFood;
+    var numDays = "> 1 month "
+    document.getElementById("numDays").innerHTML = numDays;
+    var accom = "Yes "
+    document.getElementById("accom").innerHTML = accom;
+  </script>
+{% endblock %}
