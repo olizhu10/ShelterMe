@@ -1,5 +1,5 @@
 # ShelterMe
-Created by: Avani Aggrwal, Jimena Fernandez, Gracie Jing, Olivia Zhu
+Created by: Avani Aggrwal, Jimena Fernández, Gracie Jing, Olivia Zhu
 
 **Find or offer shelter in times of natural disasters.**
 
