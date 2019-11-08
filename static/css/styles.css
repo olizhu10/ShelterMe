@@ -228,6 +228,7 @@ li {
 
 .checkbox {
   width: 150px;
+  height: 30px;
   border-style: solid;
   border-radius: 12px;
   margin: 5px;
@@ -245,4 +246,14 @@ li {
 .centered {
   margin-left: auto;
   margin-right: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.no_show {
+  list-style-type: none;
+  padding-inline-start: 0px;
 }
