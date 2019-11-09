@@ -244,3 +244,17 @@ li {
   margin-left: auto;
   margin-right: auto;
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.no_show {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.left-aligned {
+  text-align: left;
+}
